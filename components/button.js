@@ -1,5 +1,6 @@
 
 import resolveHTMLImport from "../utils/resolve-html-import.js";
+import styles from "./button.css?inline";
 
 class MyButton extends HTMLElement {
 	shadowRootRef;
@@ -11,8 +12,11 @@ class MyButton extends HTMLElement {
 	}
 
 	async connectedCallback() {
-		const { template } = await resolveHTMLImport("components/button.html");
+		const { template } = await resolveHTMLImport("button.html");
 		this.shadowRootRef.appendChild(template.cloneNode(true));
+		const style = document.createElement('style');
+		style.innerText = styles;
+		this.shadowRootRef.appendChild(style);
 		
 		const button = this.shadowRootRef.getElementById("counter-button");
 		button.textContent = `Counter is ${this.counter}`;

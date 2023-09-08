@@ -6,11 +6,11 @@
 const resolveHTMLImport = (fileName) =>
 	new Promise(async (resolve, reject) => {
 		if (typeof fileName !== "string") {
-			reject("File name must be a string.");
+			reject("fileName must be a string.");
 		}
 
 		try {
-			const file = await fetch(fileName).then((resp) => resp.text());
+			const file = await fetch(`components/${fileName}`).then((resp) => resp.text());
 			const parser = new DOMParser();
 			const htmlDoc = parser.parseFromString(file, "text/html");
 			const template =
