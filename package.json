@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "concurrently": "^8.2.1",
     "vite": "^4.4.5"
   }
 }

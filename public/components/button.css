@@ -1,0 +1,12 @@
+
+button {
+	display: block;
+	background-color: cornflowerblue;
+	color: black;
+	border: 0;
+	padding-inline: 1rem;
+	padding-block: 0.5rem;
+	border-radius: 4px;
+	font-weight: 700;
+}
+
