@@ -20,3 +20,5 @@ const resolveHTMLImport = (fileName) =>
 			reject("Error when trying to read file.");
 		}
 	});
+
+export default resolveHTMLImport;

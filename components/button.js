@@ -1,3 +1,6 @@
+
+import resolveHTMLImport from "../utils/resolve-html-import.js";
+
 class MyButton extends HTMLElement {
 	shadowRootRef;
 	counter = 0;
